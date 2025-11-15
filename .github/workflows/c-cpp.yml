@@ -1,0 +1,43 @@
+name: C++ CI
+
+on:
+  push:       # runs on push to any branch
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        build-type: [Debug, Release]
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Install dependencies
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y cmake g++ make
+
+      # 3. Configure CMake
+      - name: Configure
+        run: |
+          mkdir -p build
+          cd build
+          cmake -DCMAKE_BUILD_TYPE=${{ matrix.build-type }} ..
+
+      # 4. Build project
+      - name: Build
+        run: |
+          cd build
+          cmake --build . -- -j$(nproc)
+
+      # 5. Run tests
+      - name: Run tests
+        run: |
+          cd build
+          ctest --output-on-failure
