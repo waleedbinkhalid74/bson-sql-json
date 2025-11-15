@@ -48,3 +48,6 @@ Makefile
 
 # ignore binaries
 bin/
+
+# Visual Studio Code settings
+.vscode
