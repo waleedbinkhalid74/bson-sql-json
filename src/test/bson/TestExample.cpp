@@ -1,5 +1,5 @@
 /**
- * @file testExample.cpp
+ * @file TestExample.cpp
  * @author Waleed Bin Khalid (waleed.binkhalid@hotmail.com)
  * @brief
  * @version 0.1

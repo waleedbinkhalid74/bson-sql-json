@@ -5,6 +5,13 @@ cmake_minimum_required(VERSION 3.16)
 #----------------------------------------
 project(Bson-Sql-Json)
 
+
+#----------------------------------------
+# C++ Standard as google test requirement
+#----------------------------------------
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 #----------------------------------------
 # Binary destinations
 #----------------------------------------
@@ -25,12 +32,6 @@ file(MAKE_DIRECTORY
 # Sub-directories
 #----------------------------------------
 add_subdirectory(src)
-
-#----------------------------------------
-# C++ Standard as google test requirement
-#----------------------------------------
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #----------------------------------------
 # Fetch GoogleTest

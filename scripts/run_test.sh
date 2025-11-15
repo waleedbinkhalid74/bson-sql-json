@@ -2,4 +2,4 @@ cd ../
 cmake .
 make
 cd gtest/
-./test
+./test_functions
