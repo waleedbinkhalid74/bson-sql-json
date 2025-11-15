@@ -1,4 +1,10 @@
 #----------------------------------------
+# Setup testing pipeline
+#----------------------------------------
+enable_testing()
+add_test(NAME test_run COMMAND test)
+
+#----------------------------------------
 # Source Files
 #----------------------------------------
 set(test_source
@@ -17,8 +23,8 @@ add_executable(test ${test_source}
 #----------------------------------------
 target_link_libraries(test
     PRIVATE
-    bson    
-    gtest_main  
+    bson
+    gtest_main
 )
 
 #----------------------------------------
