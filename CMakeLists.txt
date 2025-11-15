@@ -13,6 +13,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #----------------------------------------
+# Disable asserts on release builds
+#----------------------------------------
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -DNDEBUG")
+
+#----------------------------------------
 # Binary destinations
 #----------------------------------------
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -51,4 +56,5 @@ FetchContent_MakeAvailable(googletest)
 # Setup testing pipeline
 #----------------------------------------
 enable_testing()
-add_test(NAME test_run COMMAND test_example)
+add_test(NAME test_example COMMAND test_example)
+add_test(NAME test_functions COMMAND test_functions)

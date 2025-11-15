@@ -3,6 +3,7 @@
 #----------------------------------------
 set(functions_source
     JsonValue.cpp
+    parser/PathExpr.cpp
 )
 
 

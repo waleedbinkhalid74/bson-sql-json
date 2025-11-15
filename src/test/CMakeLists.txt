@@ -9,6 +9,7 @@ set(test_source
 set(test_function_source
     RunTest.cpp
     functions/TestJsonValue.cpp
+    functions/parser/TestPathParser.cpp
 )
 
 #----------------------------------------
