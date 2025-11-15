@@ -18,3 +18,8 @@ set(bson_source
 # Library
 #----------------------------------------
 add_library(bson STATIC ${bson_source})
+
+#----------------------------------------
+# Include directories
+#----------------------------------------
+target_include_directories(bson PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..)
