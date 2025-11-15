@@ -46,6 +46,12 @@ cmake*
 !CMakeLists.txt
 Makefile
 
+# Google test generated files
+gtest/
+_deps/
+
+
+
 # ignore binaries
 bin/
 

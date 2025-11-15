@@ -1,9 +1,3 @@
-/* 
-    g++ example1.cpp ../bson/json.cpp ../bson/bson.cpp ../bson/time_support.cpp ../bson/parse_number.cpp  ../bson/base64.cpp 
-
-    vstudio: see build/examples/examples.sln
- */
-
 #include <iostream>
 #include <string>
 #include "../bson/json.h"
