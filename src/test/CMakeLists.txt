@@ -31,5 +31,5 @@ target_link_libraries(test
 # Set output directory for this executable only
 #----------------------------------------
 set_target_properties(test PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../gtest
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/gtest
 )

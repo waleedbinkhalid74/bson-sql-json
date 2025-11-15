@@ -1,5 +1,5 @@
-cd ../src
+cd ../
 cmake .
 make
-cd ../gtest/
+cd gtest/
 ./test
