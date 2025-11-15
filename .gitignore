@@ -1,0 +1,62 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.log
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# debug information files
+*.dwo
+
+# CMake generated files
+CMake*
+cmake*
+!CMakeLists.txt
+Makefile
+*.cmake
+
+# Google test generated files
+gtest/
+_deps/
+Testing/
+
+
+
+# ignore binaries
+bin/
+
+# Visual Studio Code settings
+.vscode
