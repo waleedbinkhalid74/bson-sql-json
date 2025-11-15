@@ -1,10 +1,4 @@
 #----------------------------------------
-# Setup testing pipeline
-#----------------------------------------
-enable_testing()
-add_test(NAME test_run COMMAND test)
-
-#----------------------------------------
 # Source Files
 #----------------------------------------
 set(test_source
@@ -15,13 +9,13 @@ set(test_source
 #----------------------------------------
 # Executables
 #----------------------------------------
-add_executable(test ${test_source}
+add_executable(test_example ${test_source}
 )
 
 #----------------------------------------
 # Link libraries
 #----------------------------------------
-target_link_libraries(test
+target_link_libraries(test_example
     PRIVATE
     bson
     gtest_main
@@ -30,6 +24,6 @@ target_link_libraries(test
 #----------------------------------------
 # Set output directory for this executable only
 #----------------------------------------
-set_target_properties(test PROPERTIES
+set_target_properties(test_example PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/gtest
 )

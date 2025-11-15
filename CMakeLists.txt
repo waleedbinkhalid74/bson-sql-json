@@ -45,3 +45,9 @@ FetchContent_Declare(
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
+
+#----------------------------------------
+# Setup testing pipeline
+#----------------------------------------
+enable_testing()
+add_test(NAME test_run COMMAND test_example)

@@ -6,6 +6,7 @@
 *.lo
 *.o
 *.obj
+*.log
 
 # Precompiled Headers
 *.gch
@@ -45,10 +46,12 @@ CMake*
 cmake*
 !CMakeLists.txt
 Makefile
+*.cmake
 
 # Google test generated files
 gtest/
 _deps/
+Testing/
 
 
 

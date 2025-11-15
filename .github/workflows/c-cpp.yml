@@ -26,14 +26,11 @@ jobs:
       # 3. Configure CMake
       - name: Configure
         run: |
-          mkdir -p build
-          cd build
-          cmake -DCMAKE_BUILD_TYPE=${{ matrix.build-type }} ..
+          cmake -DCMAKE_BUILD_TYPE=${{ matrix.build-type }}
 
       # 4. Build project
       - name: Build
         run: |
-          cd build
           cmake --build . -- -j$(nproc)
 
       # 5. Run tests
