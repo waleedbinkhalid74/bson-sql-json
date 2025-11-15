@@ -39,5 +39,5 @@ jobs:
       # 5. Run tests
       - name: Run tests
         run: |
-          cd build
+          cd gtest
           ctest --output-on-failure
