@@ -4,3 +4,6 @@ IndentWidth: 4
 ColumnLimit: 150
 AllowShortFunctionsOnASingleLine: false
 SortIncludes: true
+BraceWrapping:
+  AfterControlStatement: Always
+ElseIfBraceStyle: AlwaysBreak

@@ -48,4 +48,27 @@ class FeatureNotSupportedError : public std::exception {
    private:
     std::string m_message;
 };
+
+class PathNotFoundError : public std::exception {
+   public:
+    explicit PathNotFoundError(std::string path) : m_message("Path not found: " + std::move(path)) {
+    }
+
+    const char* what() const noexcept override {
+        return m_message.c_str();
+    }
+
+   private:
+    std::string m_message;
+};
+
+class InvalidTypeConversionError : public std::exception {
+   public:
+    explicit InvalidTypeConversionError() {
+    }
+
+    const char* what() const noexcept override {
+        return "Invalid type conversion attempted.";
+    }
+};
 }  // namespace funcs
